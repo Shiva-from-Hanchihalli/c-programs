@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+    int n=121,rev=0,dig,temp;
+    temp=n;
+    while(n>0)
+    {
+        dig=n%10;
+        n=n/10;
+        rev=rev*10+dig;
+        
+        
+        
+    }
+        if(temp==rev)
+        
+            printf("no is palindrome\n");
+        else
+            printf("no is not palindrome\n");
+    printf("%d",rev);
+}
