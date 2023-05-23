@@ -1,0 +1,15 @@
+#include<stdio.h>
+void copy(char*p,char*q)
+{
+   while(*p++=*q++);
+}
+void main()
+{
+    char str1[100];
+    char str2[100];
+    printf("enter the string1:");
+    scanf("%s",str1);
+    copy(str1,str2);
+    printf("%s",str1);
+}
+
