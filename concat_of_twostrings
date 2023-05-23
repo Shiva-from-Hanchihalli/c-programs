@@ -1,0 +1,21 @@
+#include<stdio.h>
+void  cat(char *p,char *q)
+{
+while(*p)
+{
+p++;
+}
+while(*p++=*q++);
+}
+void main()
+{
+    char str1[100];
+    char str2[100];
+    printf("enter string1:");
+    scanf("%s",str1);
+    printf("enter string2:");
+    scanf("%s",str2);
+        cat(str1,str2);
+    printf("%s",str1);
+    
+}
