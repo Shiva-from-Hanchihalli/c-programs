@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+char *reverse(char *p)
+{
+    static char a[100];
+    static int i;
+    if(*p)
+    {
+        reverse(p+1);
+        a[i++]=*p;
+    }
+    return a;
+}
+int main()
+{
+char str[100];
+char *q;
+scanf("%[^\n]s",str);
+q=reverse(str);
+printf("%s",q);
+   
+    return 0;
+}
