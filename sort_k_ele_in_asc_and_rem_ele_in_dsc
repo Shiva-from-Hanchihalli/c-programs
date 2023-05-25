@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare_asc(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
+int compare_dsc(const void *a, const void *b) {
+    return (*(int *)b - *(int *)a);
+}
+
+void sort_elements(int arr[], int size, int k) {
+    qsort(arr, k, sizeof(int), compare_asc);  
+    qsort(&arr[k], size - k, sizeof(int), compare_dsc);  
+}
+
+void print_array(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int array[] = {9, 4, 2, 7, 5, 1, 8, 6, 3};
+    int size = sizeof(array) / sizeof(array[0]);
+    int k = 5;
+
+    sort_elements(array, size, k);
+    print_array(array, size);
+
+    return 0;
+}
